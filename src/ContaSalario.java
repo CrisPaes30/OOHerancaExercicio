@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ContaSalario extends Conta {
 
-    private Scanner scanner;
+   // private Scanner scanner;
     private final double SALARIO;
     private double saldoContaSalario;
 

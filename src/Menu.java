@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Menu extends MenuPrincipal {
 
 
-    private int escolha;
-    private Scanner scanner;
-    private ContaCorrente contaCorrente;
-    private ContaSalario contaSalario;
-    private ContaPoupanca contaPoupanca;
+    protected int escolha;
+    private final Scanner scanner;
+    private final ContaCorrente contaCorrente;
+    private final ContaSalario contaSalario;
+    private  final ContaPoupanca contaPoupanca;
 
     public Menu(Scanner scanner, ContaCorrente cc1,
                 ContaSalario cS, ContaPoupanca p1) {

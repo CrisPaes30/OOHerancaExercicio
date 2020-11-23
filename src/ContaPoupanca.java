@@ -3,9 +3,20 @@ import java.util.Scanner;
 public class ContaPoupanca extends Conta {
 
 
-    private int diaAniversario;
-    private double taxaDeJuros;
+    //private int diaAniversario;
+    private final double taxaDeJuros;
     protected  double saldoContaPoupanca;
+    protected  double saldoConta;
+
+    public ContaPoupanca(int numero, int agencia, String banco, double saldo, double saldoContaPoupanca, double taxaDeJuros) {
+        super(numero, agencia, banco, saldo);
+        this.taxaDeJuros = taxaDeJuros;
+       // this.saldoContaPoupanca = saldo;
+        this.saldoConta = saldo;
+        this.saldoContaCorrente = saldoContaPoupanca;
+        this.saldoConta = saldoContaPoupanca;
+    }
+
 
     public boolean ValorDepositoPoupanca() {
 
@@ -16,6 +27,8 @@ public class ContaPoupanca extends Conta {
 
         Scanner scanner = new Scanner(System.in);
         double valorDeposito = scanner.nextInt();
+
+        this.saldoContaCorrente = saldoContaCorrente - valorDeposito;
 
         if (this.saldoContaCorrente >= valorDeposito) {
 
@@ -31,13 +44,6 @@ public class ContaPoupanca extends Conta {
             System.out.println("Saldo insulficiente ");
             return false;
         }
-    }
-
-    public ContaPoupanca(int numero, int agencia, String banco, double saldo, double saldoContaPoupanca, double taxaDeJuros) {
-        super(numero, agencia, banco, saldo);
-        this.taxaDeJuros = taxaDeJuros;
-        this.saldoContaPoupanca = saldo;
-        this.saldoContaCorrente = saldoContaPoupanca;
     }
 
     @Override

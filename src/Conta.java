@@ -41,4 +41,5 @@ public abstract class Conta {
     public abstract double getSaldo();
 
     public abstract void setSaldo(double saldo);
+
 }
