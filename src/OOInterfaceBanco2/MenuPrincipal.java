@@ -1,6 +1,4 @@
-package OOHerancaBanco1;
-
-import java.util.Scanner;
+package OOInterfaceBanco2;
 
 public class MenuPrincipal {
 

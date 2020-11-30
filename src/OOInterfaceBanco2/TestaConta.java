@@ -1,4 +1,4 @@
-package OOHerancaBanco1;
+package OOInterfaceBanco2;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class TestaConta {
 
         Scanner scanner = new Scanner(System.in);
 
-        ContaCorrente cc1 = new ContaCorrente (22,1,"banco CC", 100.00, 1000.00);
+        ContaCorrente cc1 = new ContaCorrente(22,1,"banco CC", 100.00, 1000.00);
         System.out.println(cc1);
 
         System.out.println("O saldo da OOHerancaBanco1.Conta corrente é R$"+ cc1.getSaldo());

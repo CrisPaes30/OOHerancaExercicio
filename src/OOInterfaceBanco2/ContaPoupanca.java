@@ -1,4 +1,4 @@
-package OOHerancaBanco1;
+package OOInterfaceBanco2;
 
 import java.util.Scanner;
 

@@ -1,3 +1,5 @@
+package OOHerancaBanco1;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -97,7 +99,7 @@ public class ContaCorrente extends Conta {
 
     @Override
     public String toString() {
-        return "ContaCorrente{" +
+        return "OOHerancaBanco1.ContaCorrente{" +
                 "chequeEspecial=" + chequeEspecial +
                 '}';
     }

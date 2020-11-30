@@ -1,3 +1,5 @@
+package OOHerancaBanco1;
+
 public abstract class Conta {
 
     private int numero;

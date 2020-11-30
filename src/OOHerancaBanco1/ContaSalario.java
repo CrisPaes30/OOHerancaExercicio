@@ -1,3 +1,5 @@
+package OOHerancaBanco1;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,7 +19,7 @@ public class ContaSalario extends Conta {
 
     @Override
     public String toString() {
-        return "ContaSalario{" +
+        return "OOHerancaBanco1.OOInterfaceBanco2.ContaSalario{" +
                 "salario=" + SALARIO +
                 '}';
     }

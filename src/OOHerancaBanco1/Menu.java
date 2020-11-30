@@ -1,3 +1,5 @@
+package OOHerancaBanco1;
+
 import java.util.Scanner;
 
 public class Menu extends MenuPrincipal {
