@@ -73,6 +73,11 @@ public class Menu extends MenuPrincipal {
                     }
                     break;
                 }
+                case "5":{
+                    System.out.println("Conta Pessoa Juridica");
+                    ContaPj contaPj = new ContaPj(33,3,"BancoCC",100.00);
+                    contaPj.pjConta();
+                }
 
                 case "0":
                     System.exit(0);

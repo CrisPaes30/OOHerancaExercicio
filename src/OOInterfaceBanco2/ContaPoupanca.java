@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class ContaPoupanca extends Conta {
 
-
     //private int diaAniversario;
     private final double taxaDeJuros;
     protected  double saldoContaPoupanca;
@@ -15,7 +14,7 @@ public class ContaPoupanca extends Conta {
         this.taxaDeJuros = taxaDeJuros;
        // this.saldoContaPoupanca = saldo;
         this.saldoConta = saldo;
-        this.saldoContaCorrente = saldoContaPoupanca;
+        saldoContaCorrente = saldoContaPoupanca;
         this.saldoConta = saldoContaPoupanca;
     }
 
@@ -30,9 +29,9 @@ public class ContaPoupanca extends Conta {
         Scanner scanner = new Scanner(System.in);
         double valorDeposito = scanner.nextInt();
 
-        this.saldoContaCorrente = saldoContaCorrente - valorDeposito;
+        saldoContaCorrente = saldoContaCorrente - valorDeposito;
 
-        if (this.saldoContaCorrente >= valorDeposito) {
+        if (saldoContaCorrente >= valorDeposito) {
 
             this.saldoContaPoupanca = this.saldoContaPoupanca + valorDeposito;
 
@@ -57,6 +56,5 @@ public class ContaPoupanca extends Conta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
 
 }

@@ -4,10 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements TiposDeConta {
+
+    @Override
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    @Override
+    public void setSaldo(double saldo) {
+
+    }
+
+    @Override
+    public double impostos(){
+        return this.getSaldo() * 0.05;
+    }
 
     private final double chequeEspecial;
     protected final double saldoInicial;
+
 
     public ContaCorrente(int numero, int agencia, String banco, double saldo, double chequeEspecial) {
         super(numero, agencia, banco, saldo);
@@ -16,7 +32,7 @@ public class ContaCorrente extends Conta {
         this.saldoChequeEspecial = chequeEspecial;
         this.saldoInicial = saldo;
         this.saldoContaCorrente = saldoInicial;
-    }
+            }
 
     public boolean EfetuarSaque() {
 
@@ -64,7 +80,7 @@ public class ContaCorrente extends Conta {
 
                 System.out.println("Saque cheque especial autorizado");
                 System.out.println("Seu novo Saldo R$ " + saldoContaCorrente);
-                System.out.println("Seu novo Saldo Cheque especial R$ " + saldoChequeEspecial);
+                System.out.println("Seu novo Saldo Cheque especial R$ " + (this.saldoChequeEspecial-impostos()));
                 System.out.println("Transação realizada com sucesso \n Deseja realizar novo saque? " +
                         "\n Escolha 1 para (Sim) ou aperte 2 para voltar ao menu principal");
                 return true;
@@ -90,7 +106,7 @@ public class ContaCorrente extends Conta {
             this.saldoContaCorrente += valorDeposito;
             this.saldoChequeEspecial += valorDeposito;
         }
-            this.saldoContaCorrente = this.saldoContaCorrente + valorDeposito;
+        this.saldoContaCorrente = this.saldoContaCorrente + valorDeposito;
 
         System.out.println("Seu novo Saldo R$ "+ saldoContaCorrente);
         System.out.println("Transação realizada com sucesso \n Deseja fazer nova operaçao? " +
@@ -99,18 +115,12 @@ public class ContaCorrente extends Conta {
 
     @Override
     public String toString() {
-        return "OOHerancaBanco1.ContaCorrente{" +
+        return "ContaCorrente{" +
                 "chequeEspecial=" + chequeEspecial +
+                ", saldoInicial=" + saldoInicial +
                 '}';
     }
 
-    @Override
-    public double getSaldo() {
-        return this.saldo;
-    }
 
-    @Override
-    public void setSaldo(double saldo) {
-
-    }
 }
+

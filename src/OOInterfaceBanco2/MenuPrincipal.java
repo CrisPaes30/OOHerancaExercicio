@@ -10,7 +10,8 @@ public class MenuPrincipal {
         System.out.println("1) Sacar");
         System.out.println("2) Depósitar");
         System.out.println("3) Investir Poupança");
-        System.out.println("4) Sacar OOHerancaBanco1.Conta Salario");
+        System.out.println("4) Sacar Conta Salario");
+        System.out.println("5) pessoa Juridica");
         System.out.println("0) Sair");
 
     }
